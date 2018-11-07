@@ -40,7 +40,10 @@ $query = $con->query($sql);
         <section id="checlist">
           <div class="container">
             <div class="row">
-              <div class="col-8">
+              <div class="col-md-4 col-sm-12">
+                <img src="<?php echo $base_url; ?>img/checklist.png" alt="" class="img-fluid">
+              </div>
+              <div class="col-md-8 col-sm-12">
                 <div class="pt-3">
                   Al presentarse el precandidato en las instalaciones de la empresa para solicitar trabajo, el Gerente de RR.HH. lo recibe y lleva a cabo según el contenido del formato CHECK LIST, la finalidad será verificar los puntos del precandidato:
                 </div>
@@ -51,7 +54,16 @@ $query = $con->query($sql);
                   <li>No tenga ninguna adicción a drogas o enervantes.</li>
                   <li>Tenga una estabilidad residencial mínima de 1 año en el domicilio actual</li>
                 </ul>
+                <textarea class="form-control"  name="comentarios" rows="5" ></textarea>
+                <span>¿Se desea continuar con el proceso?</span>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="checklist_si" id="checklist_si" value="si" checked>
+                  <label class="form-check-label" for="checklist_si">Si</label>
+                </div>
+                <input class="form-check-input" type="radio" name="checklist_no" id="checklist_no" value="no">
+                <label class="form-check-label" for="checklist_no">No</label>
               </div>
+
             </div>
           </div>
         </section>
